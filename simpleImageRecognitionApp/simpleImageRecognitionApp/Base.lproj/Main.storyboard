@@ -59,9 +59,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Image Recognition" id="Vaf-eV-cmC">
-                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="5NM-FQ-l4H"/>
-                        <barButtonItem key="rightBarButtonItem" title="Library" id="0Uh-qX-WpL"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="camera" id="5NM-FQ-l4H">
+                            <connections>
+                                <action selector="camera:" destination="BYZ-38-t0r" id="8ys-Os-Obi"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Library" id="0Uh-qX-WpL">
+                            <connections>
+                                <action selector="openLibrary:" destination="BYZ-38-t0r" id="ldQ-Pq-ggB"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="classifierLabel" destination="BiG-Fx-IHu" id="RyW-Ve-Fk9"/>
+                        <outlet property="imageView" destination="r9G-33-odM" id="f5D-VJ-07K"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
